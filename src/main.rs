@@ -1,5 +1,5 @@
 use anyhow::Result;
-use std::collections::HashMap;
+use std::collections::{BTreeMap, HashMap};
 use std::fs;
 use std::io::{self, Write};
 
@@ -8,7 +8,8 @@ fn read_corpus(corpus_path: &str) -> Result<String> {
     Ok(corpus)
 }
 
-fn split_with_separators(s: String, separator: String) -> Vec<String> {
+#[allow(dead_code)]
+fn split_with_separators_old(s: String, separator: String) -> Vec<String> {
     let split_vec: Vec<String> = s
         .split_inclusive(&separator)
         .map(|e| e.to_string())
@@ -27,7 +28,25 @@ fn split_with_separators(s: String, separator: String) -> Vec<String> {
     }
     fully_split
 }
+fn split_with_separators(s: &str, separator: String) -> Vec<String> {
+    let split_idx: Vec<_> = s.match_indices(&separator).collect();
+    let mut walker = 0;
+    let mut split_value: Vec<String> = Vec::new();
+    for (idx, _v) in split_idx {
+        if walker != idx {
+            split_value.push(s[walker..idx].to_string());
+        }
+        split_value.push(separator.clone());
+        walker = idx + separator.len();
+    }
+    if walker != s.len() {
+        split_value.push(s[walker..].to_string());
+    }
 
+    split_value
+}
+
+#[allow(unused_assignments)]
 fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
     let mut sorted_vocab: Vec<(&str, usize)> =
         vocabulary.iter().map(|(k, v)| (k.as_str(), *v)).collect();
@@ -35,12 +54,13 @@ fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
 
     let mut tokenized_word_vector: Vec<(String, bool)> = vec![(word.to_string(), false)];
     let mut copy_of_working: Vec<(String, bool)> = tokenized_word_vector.clone();
+
     let mut temp_vector: Vec<(String, bool)> = Vec::new();
-    for (token, length) in sorted_vocab.into_iter().rev() {
+    for (token, _) in sorted_vocab.into_iter().rev() {
         let mut offset = 0;
         for (i, (w, t)) in tokenized_word_vector.iter().enumerate() {
             if !t {
-                let tokenized_vector = split_with_separators(w.to_string(), token.to_string());
+                let tokenized_vector = split_with_separators(w, token.to_string());
                 temp_vector = tokenized_vector
                     .into_iter()
                     .map(|e| if e == token { (e, true) } else { (e, false) })
@@ -60,11 +80,10 @@ fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
 fn build_bpe_vocabulary(
     corpus: &str,
     vocabulary: &mut HashMap<String, usize>,
-    // vocab_size: usize,
     token_frequency: usize,
 ) -> usize {
     let tokenized_output = tokenize(corpus, vocabulary);
-    let mut potential_token: HashMap<String, usize> = HashMap::new();
+    let mut potential_token: BTreeMap<String, usize> = BTreeMap::new();
     tokenized_output.windows(2).for_each(|c| {
         let new_token = c[0].to_string() + c[1].as_str();
         potential_token
@@ -72,14 +91,18 @@ fn build_bpe_vocabulary(
             .and_modify(|c| *c += 1)
             .or_insert(1);
     });
-    let mut potential_token_vec: Vec<(String, usize)> = potential_token.into_iter().collect();
-    potential_token_vec.sort_by(|(k1, v1), (k2, v2)| v2.cmp(v1).then(k1.cmp(k2)));
+    let (mut token, mut freq) = ("".to_string(), 0);
 
-    let (token, len) = potential_token_vec.remove(0);
-    if len >= token_frequency {
+    for (k, v) in potential_token.into_iter() {
+        if v > freq {
+            token = k;
+            freq = v;
+        }
+    }
+    if freq >= token_frequency {
         vocabulary.insert(token.clone(), token.len());
     }
-    len
+    freq
 }
 
 fn main() -> Result<()> {
@@ -101,20 +124,21 @@ fn main() -> Result<()> {
         word_to_tokenize.push_str("testAAGAB bac");
     }
     println!("Corpus Size: {}", corpus.len());
-    word_to_tokenize = corpus[..1000].to_string();
+    word_to_tokenize = corpus[..].to_string();
 
-    let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
-    let string_output = format!("|{}", tokenized_output.join("|"));
+    // let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
+    // let string_output = format!("|{}", tokenized_output.join("|"));
     // println!("Output Vector:\n{:?}", tokenized_output);
-    println!("Tokenized Result:\n{}", string_output);
+    // println!("Tokenized Result:\n{}", string_output);
 
     loop {
         let len = build_bpe_vocabulary(&word_to_tokenize, &mut vocabulary, 2);
-        if len < 3 {
+        if len < 10 {
             break;
         }
-
-        println!("Vocab Length: {}", vocabulary.len());
+        if vocabulary.len() % 10 == 0 {
+            println!("Vocab Length: {}", vocabulary.len());
+        }
     }
     for (k, v) in vocabulary.iter() {
         println!("{}: {}", k, v);
