@@ -1,0 +1,183 @@
+S: 1
+e: 1
+ m: 2
+th: 2
+e : 2
+er: 2
+3: 1
+W: 1
+ou: 2
+i: 1
+re: 2
+9: 1
+. : 2
+ear: 3
+s
+: 3
+years a: 7
+U: 1
+: 1
+ble: 3
+t : 2
+ mon: 4
+ pow: 4
+o : 2
+years: 5
+7: 1
+ag: 2
+an: 2
+A: 1
+f: 1
+O: 1
+Singul: 6
+ce: 2
+j: 1
+g: 1
+o: 1
+h: 1
+nd: 2
+omput: 5
+on: 2
+er : 3
+c: 1
+le: 2
+l: 1
+ion: 3
+ of : 4
+ power doubles every two : 25
+n: 1
+1: 1
+D: 1
+ar: 2
+": 1
+st: 2
+': 1
+G: 1
+V: 1
+;: 1
+en: 2
+at : 3
+year: 4
+The : 4
+Singularit: 10
+in: 2
+Th: 2
+al: 2
+ po: 3
+&: 1
+dou: 3
+ power doubles ever: 19
+ the : 5
+Singularity: 11
+s : 2
+-: 1
+J: 1
+ the Singularity: 16
+Sing: 4
+v: 1
+:: 1
+ th: 3
+omputing power doubles every two : 33
+ month: 6
+s: 1
+stor: 4
+a: 1
+?: 1
+ power : 7
+^: 1
+R: 1
+of : 3
+
+
+I: 5
+ power doubles e: 16
+Singular: 8
+k: 1
+2: 1
+wh: 2
+w: 1
+z: 1
+4: 1
+]: 1
+d: 1
+ p: 2
+or: 2
+Z: 1
+x: 1
+ver: 3
+an : 3
+Y: 1
+!: 1
+(: 1
+mpu: 3
+): 1
+ a: 2
+E: 1
+Q: 1
+be: 2
+=: 1
+ power doubles every: 20
+T: 1
+0: 1
+b: 1
+H: 1
+5: 1
+d : 2
+B: 1
+I: 1
+y: 1
+N: 1
+C: 1
++: 1
+ul: 2
+u: 1
+he : 3
+Computing power doubles every two : 34
+,: 1
+t: 1
+
+: 1
+p: 1
+q: 1
+
+: 2
+ing: 3
+doubles : 8
+it: 2
+
+The : 6
+ months : 8
+
+
+It : 7
+/: 1
+ing power doubles every two : 28
+r: 1
+mp: 2
+}: 1
+<: 1
+f : 2
+ : 1
+.: 1
+
+
+: 4
+8: 1
+P: 1
+wo : 3
+ t: 2
+M: 1
+*: 1
+6: 1
+m: 1
+ two : 5
+{: 1
+F: 1
+X: 1
+L: 1
+mput: 4
+K: 1
+ power doubles : 15
+%: 1
+[: 1
+bles : 5

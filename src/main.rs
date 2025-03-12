@@ -52,6 +52,7 @@ fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
             }
         }
         tokenized_word_vector = copy_of_working.clone();
+    }
 
     tokenized_word_vector.into_iter().map(|(v, _)| v).collect()
 }
@@ -61,7 +62,7 @@ fn build_bpe_vocabulary(
     vocabulary: &mut HashMap<String, usize>,
     // vocab_size: usize,
     token_frequency: usize,
-) {
+) -> usize {
     let tokenized_output = tokenize(corpus, vocabulary);
     let mut potential_token: HashMap<String, usize> = HashMap::new();
     tokenized_output.windows(2).for_each(|c| {
@@ -78,6 +79,7 @@ fn build_bpe_vocabulary(
     if len >= token_frequency {
         vocabulary.insert(token.clone(), token.len());
     }
+    len
 }
 
 fn main() -> Result<()> {
@@ -98,22 +100,27 @@ fn main() -> Result<()> {
     } else {
         word_to_tokenize.push_str("testAAGAB bac");
     }
-    word_to_tokenize = corpus[..10000].to_string();
+    println!("Corpus Size: {}", corpus.len());
+    word_to_tokenize = corpus[..1000].to_string();
 
     let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
     let string_output = format!("|{}", tokenized_output.join("|"));
-    println!("Output Vector:\n{:?}", tokenized_output);
+    // println!("Output Vector:\n{:?}", tokenized_output);
     println!("Tokenized Result:\n{}", string_output);
 
-    while vocabulary.len() < 570 {
-        build_bpe_vocabulary(&word_to_tokenize, &mut vocabulary, 2);
-        println!("Vocab Length{}", vocabulary.len());
+    loop {
+        let len = build_bpe_vocabulary(&word_to_tokenize, &mut vocabulary, 2);
+        if len < 3 {
+            break;
+        }
+
+        println!("Vocab Length: {}", vocabulary.len());
     }
     for (k, v) in vocabulary.iter() {
         println!("{}: {}", k, v);
     }
     let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
-    println!("Output Vector:\n{:?}", tokenized_output);
+    // println!("Output Vector:\n{:?}", tokenized_output);
     let string_output = format!("|{}", tokenized_output.join("|"));
     println!("Tokenized Result:\n{}", string_output);
 
