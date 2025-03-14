@@ -126,6 +126,16 @@ fn build_bpe_vocabulary(
 ) -> (usize, Vec<String>) {
     let mut potential_token: BTreeMap<String, usize> = BTreeMap::new();
     tokenized_corpus.windows(2).for_each(|c| {
+        if let Some(c) = c[1].clone().chars().last() {
+            if c.is_whitespace() {
+                return;
+            }
+        }
+        if let Some(c) = c[1].clone().chars().next() {
+            if c.is_whitespace() {
+                return;
+            }
+        }
         let new_token = c[0].to_string() + c[1].as_str();
         potential_token
             .entry(new_token)
