@@ -1,183 +1,847 @@
-S: 1
-e: 1
- m: 2
-th: 2
-e : 2
-er: 2
-3: 1
-W: 1
-ou: 2
-i: 1
-re: 2
-9: 1
-. : 2
-ear: 3
-s
-: 3
-years a: 7
-U: 1
-: 1
-ble: 3
-t : 2
- mon: 4
- pow: 4
-o : 2
-years: 5
-7: 1
-ag: 2
-an: 2
-A: 1
-f: 1
-O: 1
-Singul: 6
-ce: 2
-j: 1
-g: 1
-o: 1
-h: 1
-nd: 2
-omput: 5
-on: 2
-er : 3
-c: 1
-le: 2
-l: 1
-ion: 3
- of : 4
- power doubles every two : 25
-n: 1
-1: 1
-D: 1
-ar: 2
-": 1
-st: 2
-': 1
-G: 1
-V: 1
-;: 1
-en: 2
-at : 3
-year: 4
-The : 4
-Singularit: 10
-in: 2
-Th: 2
-al: 2
- po: 3
-&: 1
-dou: 3
- power doubles ever: 19
- the : 5
-Singularity: 11
-s : 2
--: 1
-J: 1
- the Singularity: 16
-Sing: 4
-v: 1
-:: 1
- th: 3
-omputing power doubles every two : 33
- month: 6
-s: 1
-stor: 4
-a: 1
-?: 1
- power : 7
-^: 1
-R: 1
-of : 3
-
-
-I: 5
- power doubles e: 16
-Singular: 8
-k: 1
-2: 1
-wh: 2
-w: 1
-z: 1
-4: 1
-]: 1
-d: 1
- p: 2
-or: 2
-Z: 1
-x: 1
-ver: 3
-an : 3
-Y: 1
-!: 1
-(: 1
-mpu: 3
-): 1
- a: 2
-E: 1
-Q: 1
-be: 2
-=: 1
- power doubles every: 20
-T: 1
-0: 1
-b: 1
+. I: 3
+ = : 3
+e th: 4
+ever: 4
+ic: 2
+ol: 2
+ly: 2
+produ: 5
+se, : 4
+ot: 2
+al : 3
 H: 1
+man: 3
+T: 1
+ they : 6
+6: 1
+ ar: 3
+ence: 4
+..: 2
+number : 7
+from: 4
+can: 3
+wo : 3
+work: 4
+thing : 6
+human : 6
+m: 1
+very : 5
+ af: 3
+. Th: 4
+'s : 3
+ tim: 4
+ese : 4
+ any: 4
+read: 4
+fect: 4
+for: 3
+com: 3
+oth: 3
+ a: 2
+w: 1
+ill: 3
 5: 1
-d : 2
-B: 1
-I: 1
-y: 1
-N: 1
-C: 1
-+: 1
-ul: 2
-u: 1
-he : 3
-Computing power doubles every two : 34
-,: 1
-t: 1
-
-: 1
-p: 1
-q: 1
+ere : 4
+if : 3
+[: 1
+'t: 2
+intellig: 8
+ two : 5
+. B: 3
+ about: 6
+ous: 3
+ok: 2
+e that : 7
+every: 5
+bit : 4
+des: 3
+humans : 7
+betwe: 5
 
 : 2
-ing: 3
-doubles : 8
-it: 2
-
-The : 6
- months : 8
-
-
-It : 7
-/: 1
-ing power doubles every two : 28
+not : 4
+ink: 3
+power: 5
+eman: 4
+end : 4
+0: 1
+ning : 5
+oll: 3
+T(: 2
+ally : 5
+of the : 7
+ure: 3
+ the : 5
+ate : 4
+n : 2
+inc: 3
+ence : 5
+who : 4
+ysic: 4
+y: 1
+computer: 8
+ll: 2
+um: 2
+ord: 3
+ognitive : 9
+. You: 5
+Per: 3
+enhanced : 9
+mall: 4
+fut: 3
+. (: 3
+or: 2
+iv: 2
+sol: 3
+on : 3
+pl: 2
+du: 2
+ an : 4
+I : 2
+si: 2
+se: 2
+ation : 6
+form: 4
+what : 5
+row: 3
+. If: 4
+over: 4
+s. : 3
+illion: 6
+with : 5
+ogn: 3
+ness: 4
+obvious : 8
+vis: 3
+ at: 3
+would : 6
+. N: 3
+only : 5
+rit: 3
+my : 3
+all: 3
+- : 2
+arg: 3
 r: 1
-mp: 2
+cep: 3
+ecess: 5
+onth: 4
+and : 4
+wa: 2
+reak: 4
+e that: 6
+ than : 6
+semantic primitiv: 17
+ip: 2
+aus: 3
+dis: 3
+9: 1
+not: 3
+er: 2
+ound: 4
+ly : 3
+ind: 3
+W: 1
+underst: 7
+z: 1
+fir: 3
+oubl: 4
+int : 4
+ity to : 7
+mat: 3
+unction: 7
+just: 4
+ity: 3
+unimagin: 8
+ous : 4
+ again: 6
+nanot: 5
+Un: 2
+lik: 3
+n't: 3
+4: 1
+to : 3
+ern: 3
+ that: 5
+ect: 3
+ of the : 8
+ p: 2
+bil: 3
+been: 4
+iz: 2
+your: 4
+ we : 4
+ comput: 7
+atic: 4
+fin: 3
+run: 3
+mo: 2
+ut : 3
+Trans: 5
+pos: 3
+y to : 5
+ in: 3
+ tak: 4
+en : 3
+every : 6
+rimitiv: 7
+eg: 2
+og: 2
+u: 1
+itive : 6
+ro: 2
+ut: 2
+ere: 3
+. : 2
+an : 3
+ellig: 5
+; : 2
+ s: 2
+gh: 2
+e, : 3
+ction: 5
+peo: 3
+ver: 3
+ist: 3
 }: 1
-<: 1
-f : 2
- : 1
+enhan: 5
+ef: 2
+pla: 3
+der: 3
+'t : 3
+log: 3
+at : 3
+bl: 2
+echno: 5
 .: 1
+one: 3
+ would : 7
+ al: 3
+= : 2
+e : 2
+h: 1
+e.
+
+: 6
+em: 2
+bet: 3
+. E: 3
+=: 1
+i: 1
+K: 1
+you: 3
+ans: 3
+. W: 3
+other : 6
+ and : 5
+ers : 4
+ l: 2
+experi: 6
+w : 2
+even : 5
+D: 1
 
 
 : 4
-8: 1
-P: 1
-wo : 3
- t: 2
-M: 1
-*: 1
-6: 1
-m: 1
- two : 5
-{: 1
-F: 1
-X: 1
-L: 1
-mput: 4
-K: 1
- power doubles : 15
+': 1
+way : 4
+ it : 4
+it : 3
+ard: 3
+ there : 7
+ert: 3
+.
+
+A: 6
+et : 3
+ies: 3
+k: 1
+on't : 5
+ f: 2
+jec: 3
+echnology : 10
+under: 5
+,: 1
+, but : 6
+ st: 3
+re : 3
+ing s: 5
+ual : 4
+rain: 4
+al: 2
+Q: 1
+a: 1
+ul: 2
+In: 2
+7: 1
+od: 2
+2: 1
+ w: 2
+until: 5
+bu: 2
+ust: 3
+be: 2
+descri: 6
+me: 2
+y : 2
+be the : 7
+ing to : 7
+eas: 3
+ tr: 3
+de: 2
+mak: 3
 %: 1
-[: 1
-bles : 5
+gener: 5
+ about : 7
+abl: 3
+get: 3
+may : 4
+neuron: 6
+.
+
+: 5
+o: 1
+(: 1
+e of : 5
+happ: 4
+are : 4
+page : 5
+es to : 6
+ce : 3
+ ap: 3
+3^^: 3
+ with: 5
+ow: 2
+mor: 3
+10: 2
+ener: 4
+Y: 1
+much: 4
+al s: 4
+ure : 4
+<: 1
+intelligence: 12
+*: 1
+x: 1
+is a : 5
+ix: 2
+ause : 5
+possi: 5
+power : 6
+o : 2
+ir: 2
+3: 1
+ed: 2
+ru: 2
+han: 3
+, and : 6
+enhance: 7
+. A: 3
+ a m: 4
+most : 5
+mar: 3
+ur: 2
+.
+: 3
+t of : 5
+entire : 7
+ies : 4
+V: 1
+people : 7
+e: 1
+ceptual : 8
+st: 2
+oun: 3
+far: 3
+ob: 2
+ atom: 5
+ the s: 6
+p: 1
+ter: 3
+fast: 4
+tion: 4
+qu: 2
+beyond : 7
+ret: 3
+ig: 2
+obvious: 7
+ally: 4
+manip: 5
+tic primitiv: 12
+as: 2
+con: 3
+ a s: 4
+ primitiv: 9
+ will : 6
+ack: 3
+gr: 2
+ing: 3
+est: 3
+an: 2
+imit: 4
+sel: 3
+ang: 3
+lu: 2
+: : 2
+eta: 3
+y, : 3
+can : 4
+N: 1
+et: 2
+ight: 4
+): 1
+no : 3
+Singularity: 11
+it: 2
+id: 2
+, wh: 4
+omput: 5
+econ: 4
+lif: 3
+ sub: 4
+e t: 3
+do: 2
+so: 2
+ is : 4
+fa: 2
+res: 3
+j: 1
+es : 3
+sh: 2
+for : 4
+could : 6
+ably : 5
+s and : 6
+?: 1
+e a: 3
+ ag: 3
+till: 4
+ong: 3
+igh: 3
+in : 3
+ ab: 3
+som: 3
+anot: 4
+less: 4
+pict: 4
+lo: 2
+Singular: 8
+^: 1
+S: 1
+human m: 7
+ness : 5
+of a : 5
+ich: 3
+U: 1
+really : 7
+ion: 3
+s are : 6
+act: 3
+se : 3
+law: 3
+bec: 3
+use: 3
+ing a : 6
+mbol: 4
+E: 1
+Th: 2
+-: 1
+{: 1
+by : 3
+compl: 5
+!: 1
+L: 1
+in: 2
+sim: 3
+s : 2
+, b: 3
+ as: 3
+pro: 3
+" : 2
+ri: 2
+int: 3
+ity : 4
+blem: 4
+ill : 4
+ of: 3
+ trans: 6
+ruct: 4
+35: 2
+ act: 4
+Transcend: 9
+problem: 7
+one : 4
+Univers: 7
+occur: 5
+. This : 7
+smarter: 7
+1: 1
+ su: 3
+ - : 3
+in the : 7
+ain: 3
+per: 3
+ck: 2
+v: 1
+ abil: 5
+ive : 4
+oul: 3
+ing the : 8
+self: 4
+ex: 2
+ort: 3
+) : 2
+om: 2
+ould: 4
+t : 2
+O: 1
+on: 2
+ent : 4
+es: 2
+rea: 3
+sp: 2
+years: 5
+rom: 3
+and: 3
+F: 1
+ph: 2
+ that : 6
+so : 3
+at: 2
+able : 5
+has : 4
+ict: 3
+be : 3
+tim: 3
+ have : 6
+s: 1
+d of : 5
+uch: 3
+ce: 2
+fici: 4
+ind : 4
+? : 2
+reas: 4
+ their: 6
+. O: 3
+PT: 2
+ than: 5
+ac: 2
+of : 3
+possibl: 7
+inv: 3
+rob: 3
++: 1
+re: 2
+way: 3
+ though: 7
+ am: 3
+, or: 4
+. We : 5
+Lif: 3
+athematic: 9
+neur: 4
+J: 1
+ter : 4
+?
+
+: 5
+athem: 5
+ think: 6
+wh: 2
+ccur: 4
+with: 4
+e. : 3
+tifici: 6
+If: 2
+ thre: 5
+ext: 3
+inst: 4
+ort : 4
+ymbol: 5
+ all: 4
+hy : 3
+ced: 3
+ell: 3
+th: 2
+some : 5
+art: 3
+ary : 4
+ any : 5
+intelligence : 13
+we : 3
+is: 2
+par: 3
+level: 5
+, the : 6
+ith: 3
+ the Singularity : 17
+, it : 5
+ch: 2
+finit: 5
+s, : 3
+. It : 5
+es the : 7
+same : 5
+." : 3
+B: 1
+ak: 2
+conscious: 9
+or : 3
+doubl: 5
+ou: 2
+d: 1
+ingular: 7
+now : 4
+pers: 4
+hap: 3
+pre: 3
+year: 4
+ed to : 6
+I: 1
+l: 1
+imag: 4
+research: 8
+": 1
+ all : 5
+ag: 2
+enti: 4
+ual: 3
+aw: 2
+cor: 3
+us: 2
+out : 4
+M: 1
+ra: 2
+ular: 4
+: 1
+no: 2
+on the : 7
+8: 1
+? W: 3
+rimit: 5
+C: 1
+im: 2
+il: 2
+, : 2
+fic: 3
+ap: 2
+ha: 2
+ay: 2
+just : 5
+echnolog: 8
+20: 2
+3^: 2
+sci: 3
+ad: 2
+ you: 4
+cept: 4
+writ: 4
+ight : 5
+don't : 6
+will be : 8
+up: 2
+ can: 4
+:: 1
+humans: 6
+have : 5
+ame : 4
+ould : 5
+ess: 3
+tic: 3
+desc: 4
+Univ: 4
+gram: 4
+ear: 3
+larg: 4
+Z: 1
+op: 2
+su: 2
+numbers: 7
+ower : 5
+bol: 3
+ory: 3
+s of : 5
+ing : 4
+end: 3
+t: 1
+Powers : 7
+est : 4
+prob: 4
+pon: 3
+n't : 4
+ som: 4
+oper: 4
+pot: 3
+ens: 3
+human: 5
+beyon: 5
+ con: 4
+p : 2
+ec: 2
+Transc: 6
+consci: 6
+I': 2
+exper: 5
+ a f: 4
+ a c: 4
+A: 1
+obvi: 4
+ci: 2
+plan: 4
+pres: 4
+age : 4
+yon: 3
+ys: 2
+^^: 2
+ m: 2
+'s: 2
+ c: 2
+put: 3
+un: 2
+imagin: 6
+&: 1
+rans: 4
+hat : 4
+ve : 3
+ b: 2
+st : 3
+visual: 6
+had : 4
+ult: 3
+ent: 3
+ever : 5
+out: 3
+was : 4
+e to : 5
+ely : 4
+ a : 3
+seman: 5
+ant: 3
+will : 5
+our: 3
+el: 2
+e a : 4
+ at : 4
+c: 1
+equ: 3
+plo: 3
+hum: 3
+ can : 5
+di: 2
+ath: 3
+how: 3
+long: 4
+is the : 7
+/: 1
+only: 4
+ t: 2
+vi: 2
+is : 3
+gra: 3
+d : 2
+ust : 4
+we: 2
+eone : 5
+ay : 3
+ulat: 4
+ough: 4
+numb: 4
+ are : 5
+n: 1
+ma: 2
+Singularity : 12
+experience: 10
+low: 3
+ of : 4
+am: 2
+har: 3
+iffer: 5
+f: 1
+ers: 3
+of: 2
+will: 4
+po: 2
+Pow: 3
+ : 1
+ to the : 8
+go: 2
+S{: 2
+li: 2
+
+: 1
+comput: 6
+le : 3
+ution: 5
+P: 1
+G: 1
+ower: 4
+en: 2
+wor: 3
+ an: 3
+ed : 3
+pe: 2
+ d: 2
+X: 1
+if: 2
+ as : 4
+fer: 3
+a : 2
+er, : 4
+ech: 3
+the : 4
+;: 1
+program: 7
+ar: 2
+even: 4
+til: 3
+arch: 4
+ea: 2
+ne: 2
+e the : 6
+. The : 6
+]: 1
+er : 3
+g: 1
+R: 1
+ this : 6
+eth: 3
+ wh: 3
+cc: 2
+into: 4
+smar: 4
+cont: 4
+know: 4
+ them: 5
+q: 1
+ess : 4
+ti: 2
+ th: 3
+ and: 4
+b: 1
+ev: 2
+The : 4
+by: 2
+nd : 3
+necess: 6
+, and: 5
+years : 6
+ple : 4
+being : 6
+s to : 5
+ct: 2
+now: 3
+You: 3
+ to: 3
+ the: 4
+physic: 6
+evel: 4
+num: 3
+rese: 4
+ to : 4
+happen: 6
+ation: 5
+. T: 3
+) = : 4
+ingle : 6
+mod: 3

@@ -1,4 +1,5 @@
 use anyhow::Result;
+use std::cmp::Ordering;
 use std::collections::{BTreeMap, HashMap};
 use std::fs;
 use std::io::{self, Write};
@@ -42,11 +43,11 @@ fn split_with_separators(s: &str, separator: String) -> Vec<String> {
     if walker != s.len() {
         split_value.push(s[walker..].to_string());
     }
-
     split_value
 }
 
 #[allow(unused_assignments)]
+#[allow(dead_code)]
 fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
     let mut sorted_vocab: Vec<(&str, usize)> =
         vocabulary.iter().map(|(k, v)| (k.as_str(), *v)).collect();
@@ -76,15 +77,34 @@ fn tokenize(word: &str, vocabulary: &HashMap<String, usize>) -> Vec<String> {
 
     tokenized_word_vector.into_iter().map(|(v, _)| v).collect()
 }
+#[allow(dead_code)]
+fn character_level_tokenize(word: &str) -> Vec<String> {
+    word.chars().map(|c| c.to_string()).collect()
+}
 
+fn merge_tokenized_corpus(tokenized_corpus: &Vec<String>, token: String) -> Vec<String> {
+    let mut new_tokenized_corpus: Vec<String> = Vec::with_capacity(tokenized_corpus.len());
+    let mut skip = false;
+    tokenized_corpus.windows(2).for_each(|c| {
+        let new_token = c[0].to_string() + c[1].as_str();
+        if skip {
+            skip = false;
+        } else if new_token.cmp(&token) == Ordering::Equal {
+            new_tokenized_corpus.push(new_token);
+            skip = true;
+        } else {
+            new_tokenized_corpus.push(c[0].to_string());
+        }
+    });
+    new_tokenized_corpus
+}
 fn build_bpe_vocabulary(
-    corpus: &str,
+    tokenized_corpus: &Vec<String>,
     vocabulary: &mut HashMap<String, usize>,
     token_frequency: usize,
-) -> usize {
-    let tokenized_output = tokenize(corpus, vocabulary);
+) -> (usize, Vec<String>) {
     let mut potential_token: BTreeMap<String, usize> = BTreeMap::new();
-    tokenized_output.windows(2).for_each(|c| {
+    tokenized_corpus.windows(2).for_each(|c| {
         let new_token = c[0].to_string() + c[1].as_str();
         potential_token
             .entry(new_token)
@@ -102,7 +122,7 @@ fn build_bpe_vocabulary(
     if freq >= token_frequency {
         vocabulary.insert(token.clone(), token.len());
     }
-    freq
+    (freq, merge_tokenized_corpus(tokenized_corpus, token))
 }
 
 fn main() -> Result<()> {
@@ -113,8 +133,10 @@ fn main() -> Result<()> {
 
     let corpus = read_corpus(corpus_path)?;
     let mut vocabulary: HashMap<String, usize> = HashMap::new();
+    let mut tokenized_output: Vec<String> = Vec::new();
     corpus.chars().map(|c| c.to_string()).for_each(|s| {
         vocabulary.insert(s.clone(), s.len());
+        tokenized_output.push(s.clone());
     });
 
     let mut word_to_tokenize = String::new();
@@ -124,27 +146,25 @@ fn main() -> Result<()> {
         word_to_tokenize.push_str("testAAGAB bac");
     }
     println!("Corpus Size: {}", corpus.len());
-    word_to_tokenize = corpus[..].to_string();
 
-    // let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
-    // let string_output = format!("|{}", tokenized_output.join("|"));
-    // println!("Output Vector:\n{:?}", tokenized_output);
-    // println!("Tokenized Result:\n{}", string_output);
+    // word_to_tokenize = corpus[..].to_string();
+    // let mut tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
+    // let mut tokenized_output = character_level_tokenize(&word_to_tokenize);
 
     loop {
-        let len = build_bpe_vocabulary(&word_to_tokenize, &mut vocabulary, 2);
+        let (len, new_tokenized_output) =
+            build_bpe_vocabulary(&tokenized_output, &mut vocabulary, 2);
         if len < 10 {
             break;
         }
         if vocabulary.len() % 10 == 0 {
             println!("Vocab Length: {}", vocabulary.len());
         }
+        tokenized_output = new_tokenized_output;
     }
     for (k, v) in vocabulary.iter() {
         println!("{}: {}", k, v);
     }
-    let tokenized_output = tokenize(&word_to_tokenize, &vocabulary);
-    // println!("Output Vector:\n{:?}", tokenized_output);
     let string_output = format!("|{}", tokenized_output.join("|"));
     println!("Tokenized Result:\n{}", string_output);
 
